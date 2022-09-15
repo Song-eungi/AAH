@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Montserrat:wght@300&display=swap');
+body {
+    /* background-image: url(https://cdn.pixabay.com/photo/2015/12/06/18/28/capsules-1079838_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* font-family: 'Gowun Batang', serif; */
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    height: 100vh;
+    color: black;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* display: table-row; */
+    
+
+}
+.app {
+    background-color: rgba(255, 255, 255, 0.61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;     
+}
+
+.container {
+    width: 800px;
+            padding: 25px;
+            background-color: rgba(247, 245, 245, 0.664);
+            box-sizing: border-box;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.205);
+}
+
+.form-row label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.form-row select {
+    box-sizing: border-box;
+            border: 1px solid #eee;
+            width: 100%;
+            padding: 15px;
+            padding-left: 30px;
+            border-radius: 5px;
+            margin-bottom: 14px;
+}
+
+#hotels-select {
+    overflow: auto;
+}
+
+h3 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+
+}

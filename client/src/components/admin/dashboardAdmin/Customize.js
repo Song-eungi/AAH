@@ -55,7 +55,7 @@ const UploadImageSection = () => {
     <Fragment>
       <div className="relative m-4 bg-white p-4 shadow-lg">
         <h1 className="border-b-2 border-yellow-700 mb-4 pb-2 text-2xl font-semibold">
-          Shop Slider Images
+          슬라이드 이미지
         </h1>
         <div className="relative flex flex-col space-y-2">
           <div
@@ -76,7 +76,7 @@ const UploadImageSection = () => {
                 d="M12 6v6m0 0v6m0-6h6m-6 0H6"
               />
             </svg>{" "}
-            <span>Upload File</span>
+            <span>사진 추가</span>
           </div>
           <input
             onChange={(e) => uploadImageHandler(e.target.files[0])}

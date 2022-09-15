@@ -30,7 +30,7 @@ const Navber = (props) => {
   return (
     <Fragment>
       {/* Navber Section */}
-      <nav className="fixed top-0 w-full z-20 shadow-lg lg:shadow-none bg-white">
+      <nav className=" w-full top-0  z-20 shadow-lg lg:shadow-none bg-white " >
         <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3">
           <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
             <span
@@ -41,16 +41,23 @@ const Navber = (props) => {
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
-              onClick={(e) => history.push("/blog")}
+              onClick={(e) => history.push("/nut")}
             >
-              Blog
+              Nutrients
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
-              onClick={(e) => history.push("/contact-us")}
+              onClick={(e) => history.push("/bmi")}
             >
-              Contact us
+              BMI
             </span>
+            <span
+              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              onClick={(e) => history.push("/healthhealth")}
+            >
+              News
+            </span>
+            
           </div>
           <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center">
             <svg
@@ -71,17 +78,18 @@ const Navber = (props) => {
             <span
               onClick={(e) => history.push("/")}
               style={{ letterSpacing: "0.10rem" }}
-              className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
+              className=" max-28 flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
             >
-              Hayroo
+              <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8BOod%2FbtrLLWryKWt%2Fc0ssIhK3zgU3KkjbAkwbHk%2Fimg.png" className="w-28" ></img>
+              {/* AAH */}
             </span>
           </div>
           <div
             onClick={(e) => history.push("/")}
             style={{ letterSpacing: "0.70rem" }}
-            className="hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
-          >
-            Hayroo
+            className=" max-28 hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
+          ><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8BOod%2FbtrLLWryKWt%2Fc0ssIhK3zgU3KkjbAkwbHk%2Fimg.png" className="max-h-40"></img>
+            {/* AAH */}
           </div>
           <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
             {/*  WishList Page Button */}
@@ -280,7 +288,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Admin Panel</span>
+                            <span>관리자 페이지</span>
                           </span>
                           <span
                             onClick={(e) => logout()}
@@ -302,7 +310,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Logout</span>
+                            <span>로그아웃</span>
                           </span>
                         </li>
                       </Fragment>

@@ -77,13 +77,13 @@ const AllCategory = (props) => {
         <table className="table-auto border w-full my-2">
           <thead>
             <tr>
-              <th className="px-4 py-2 border">Category</th>
-              <th className="px-4 py-2 border">Description</th>
-              <th className="px-4 py-2 border">Image</th>
-              <th className="px-4 py-2 border">Status</th>
-              <th className="px-4 py-2 border">Created at</th>
-              <th className="px-4 py-2 border">Updated at</th>
-              <th className="px-4 py-2 border">Actions</th>
+              <th className="px-4 py-2 border">카테고리</th>
+              <th className="px-4 py-2 border">설명</th>
+              <th className="px-4 py-2 border">사진</th>
+              <th className="px-4 py-2 border">상태</th>
+              <th className="px-4 py-2 border">만든 시간</th>
+              <th className="px-4 py-2 border">수정 시간</th>
+              <th className="px-4 py-2 border">수정/삭제</th>
             </tr>
           </thead>
           <tbody>
@@ -113,7 +113,7 @@ const AllCategory = (props) => {
           </tbody>
         </table>
         <div className="text-sm text-gray-600 mt-2">
-          Total {categories && categories.length} category found
+          총 {categories && categories.length} 개
         </div>
       </div>
     </Fragment>

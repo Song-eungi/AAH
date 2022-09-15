@@ -22,7 +22,7 @@ const Menu = () => {
             data.menu ? "border-b-2 border-yellow-700" : ""
           } px-4 py-3 cursor-pointer`}
         >
-          Description
+          상품 상세
         </div>
         <div
           onClick={(e) => dispatch({ type: "menu", payload: false })}
@@ -30,7 +30,7 @@ const Menu = () => {
             !data.menu ? "border-b-2 border-yellow-700" : ""
           } px-4 py-3 relative flex cursor-pointer`}
         >
-          <span>Reviews</span>
+          <span>리뷰</span>
           <span className="absolute text-xs top-0 right-0 mt-2 bg-yellow-700 text-white rounded px-1">
             {layoutData.singleProductDetail.pRatingsReviews.length}
           </span>

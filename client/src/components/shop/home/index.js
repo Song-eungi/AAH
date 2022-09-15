@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import ProductCategory from "./ProductCategory";
 import { homeState, homeReducer } from "./HomeContext";
 import SingleProduct from "./SingleProduct";
+// import { SubSlider } from "./ImageSlider";
 
 export const HomeContext = createContext();
 
@@ -11,6 +12,7 @@ const HomeComponent = () => {
   return (
     <Fragment>
       <Slider />
+     
       {/* Category, Search & Filter Section */}
       <section className="m-4 md:mx-8 md:my-6">
         <ProductCategory />
@@ -19,6 +21,10 @@ const HomeComponent = () => {
       <section className="m-4 md:mx-8 md:my-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <SingleProduct />
       </section>
+      
+        {/* <SubSlider/> */}
+      
+      
     </Fragment>
   );
 };

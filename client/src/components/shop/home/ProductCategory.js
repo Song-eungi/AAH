@@ -20,7 +20,7 @@ const ProductCategory = (props) => {
           }`}
         >
           <span className="text-md md:text-lg hover:text-yellow-700">
-            Categories
+            카테고리
           </span>
           <svg
             className="w-4 h-4 text-yellow-700"
@@ -38,7 +38,7 @@ const ProductCategory = (props) => {
           </svg>
         </div>
         <div className="flex space-x-2">
-          <div
+          {/* <div
             onClick={(e) =>
               dispatch({
                 type: "filterListDropdown",
@@ -66,8 +66,8 @@ const ProductCategory = (props) => {
                 ></path>
               </svg>
             </span>
-          </div>
-          <span>/</span>
+          </div> */}
+          <span></span>
           <div
             onClick={(e) =>
               dispatch({
@@ -79,7 +79,7 @@ const ProductCategory = (props) => {
               data.searchDropdown ? "text-yellow-700" : ""
             }`}
           >
-            <span className="text-md md:text-lg">Search</span>
+            <span className="text-md md:text-lg">검색</span>
             <span>
               <svg
                 className="w-4 h-4 text-gray-700 text-yellow-700"

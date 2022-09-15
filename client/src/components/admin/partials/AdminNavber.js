@@ -40,7 +40,7 @@ const AdminNavber = (props) => {
             style={{ letterSpacing: "0.70rem" }}
             className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
           >
-            Hayroo
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8BOod%2FbtrLLWryKWt%2Fc0ssIhK3zgU3KkjbAkwbHk%2Fimg.png"></img>
           </span>
         </div>
         {/* Small Screen Show */}
@@ -65,12 +65,12 @@ const AdminNavber = (props) => {
             style={{ letterSpacing: "0.10rem" }}
             className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
           >
-            Hayroo
+            AAH
           </span>
         </div>
         {/* Both Screen show */}
         <div className="flex items-center">
-          <div className="hover:bg-gray-200 rounded-lg p-2" title="Search">
+          {/* <div className="hover:bg-gray-200 rounded-lg p-2" title="Search">
             <svg
               className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800"
               fill="none"
@@ -85,8 +85,8 @@ const AdminNavber = (props) => {
                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
               />
             </svg>
-          </div>
-          <div className="hover:bg-gray-200 rounded-lg p-2" title="Search">
+          </div> */}
+          {/* <div className="hover:bg-gray-200 rounded-lg p-2" title="Search">
             <svg
               className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800"
               fill="none"
@@ -101,7 +101,7 @@ const AdminNavber = (props) => {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-          </div>
+          </div> */}
           {/* Logout Button Dropdown */}
           <div
             className="userDropdownBtn hover:bg-gray-200 px-2 py-2 rounded-lg relative"
@@ -146,7 +146,7 @@ const AdminNavber = (props) => {
                   <span>Shop</span>
                 </span>
                 <span className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer">
-                  <span>
+                  {/* <span>
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -167,10 +167,10 @@ const AdminNavber = (props) => {
                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                  </span>
-                  <span>Setting</span>
+                  </span> */}
+                  {/* <span>Setting</span> */}
                 </span>
-                <span
+                {/* <span
                   onClick={(e) => logout()}
                   className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer"
                 >
@@ -191,7 +191,7 @@ const AdminNavber = (props) => {
                     </svg>
                   </span>
                   <span>Logout</span>
-                </span>
+                </span> */}
               </li>
             </div>
           </div>

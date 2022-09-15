@@ -148,7 +148,7 @@ const EditProductModal = (props) => {
           <form className="w-full" onSubmit={(e) => submitForm(e)}>
             <div className="flex space-x-1 py-4">
               <div className="w-1/2 flex flex-col space-y-1 space-x-1">
-                <label htmlFor="name">Product Name *</label>
+                <label htmlFor="name">상품 이름 *</label>
                 <input
                   value={editformData.pName}
                   onChange={(e) =>
@@ -164,7 +164,7 @@ const EditProductModal = (props) => {
                 />
               </div>
               <div className="w-1/2 flex flex-col space-y-1 space-x-1">
-                <label htmlFor="price">Product Price *</label>
+                <label htmlFor="price">상품 가격 *</label>
                 <input
                   value={editformData.pPrice}
                   onChange={(e) =>
@@ -182,7 +182,7 @@ const EditProductModal = (props) => {
               </div>
             </div>
             <div className="flex flex-col space-y-2">
-              <label htmlFor="description">Product Description *</label>
+              <label htmlFor="description">상품 설명 *</label>
               <textarea
                 value={editformData.pDescription}
                 onChange={(e) =>
@@ -202,7 +202,7 @@ const EditProductModal = (props) => {
             </div>
             {/* Most Important part for uploading multiple image */}
             <div className="flex flex-col mt-4">
-              <label htmlFor="image">Product Images *</label>
+              <label htmlFor="image">상품 이미지 *</label>
               {editformData.pImages ? (
                 <div className="flex space-x-1">
                   <img
@@ -239,7 +239,7 @@ const EditProductModal = (props) => {
             {/* Most Important part for uploading multiple image */}
             <div className="flex space-x-1 py-4">
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="status">Product Status *</label>
+                <label htmlFor="status">상품 상태 *</label>
                 <select
                   value={editformData.pStatus}
                   onChange={(e) =>
@@ -263,7 +263,7 @@ const EditProductModal = (props) => {
                 </select>
               </div>
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="status">Product Category *</label>
+                <label htmlFor="status">상품 카테고리 *</label>
                 <select
                   onChange={(e) =>
                     setEditformdata({
@@ -312,7 +312,7 @@ const EditProductModal = (props) => {
             </div>
             <div className="flex space-x-1 py-4">
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="quantity">Product in Stock *</label>
+                <label htmlFor="quantity">상품 재고 *</label>
                 <input
                   value={editformData.pQuantity}
                   onChange={(e) =>
@@ -329,7 +329,7 @@ const EditProductModal = (props) => {
                 />
               </div>
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="offer">Product Offfer (%) *</label>
+                <label htmlFor="offer">상품 할인율 (%) *</label>
                 <input
                   value={editformData.pOffer}
                   onChange={(e) =>
@@ -352,7 +352,7 @@ const EditProductModal = (props) => {
                 type="submit"
                 className="rounded-full bg-gray-800 text-gray-100 text-lg font-medium py-2"
               >
-                Update product
+                상품 수정
               </button>
             </div>
           </form>

@@ -65,12 +65,12 @@ const Product = () => {
                 </div>
                 <div className="md:w-1/2 md:flex md:items-center md:justify-around">
                   <div className="font-semibold text-gray-600">
-                    ${product.pPrice}.00
+                    {product.pPrice}원
                   </div>
                   {product.pQuantity > 0 ? (
-                    <div className="text-green-500 my-1 md:my-0">In Stock</div>
+                    <div className="text-green-500 my-1 md:my-0">재고 있음</div>
                   ) : (
-                    <div className="text-red-500 my-1 md:my-0">Out Stock</div>
+                    <div className="text-red-500 my-1 md:my-0">재고 없음</div>
                   )}
 
                   <div
@@ -78,7 +78,7 @@ const Product = () => {
                     onClick={(e) => history.push(`/products/${product._id}`)}
                     className="inline-block px-4 py-2 text-white text-xs md:text-base text-center cursor-pointer hover:opacity-75"
                   >
-                    View
+                    상품 상세
                   </div>
                 </div>
                 <div className="absolute top-0 right-0 mx-2 my-2 md:relative">
@@ -111,7 +111,7 @@ const SingleWishProduct = (props) => {
   return (
     <Fragment>
       <section className="mx-4 mt-20 md:mx-12 md:mt-32 lg:mt-24">
-        <div className="text-2xl mx-2 mb-6">Wishlist</div>
+        <div className="text-2xl mx-2 mb-6">찜 리스트</div>
         {/* Product List */}
         <Product />
       </section>

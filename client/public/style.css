@@ -148,6 +148,9 @@ sup {
 
 img {
   border-style: none;
+  /* box-sizing:border-box; */
+  /* text-align: center; */
+  
 }
 
 /* Forms
@@ -5945,6 +5948,8 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+ 
+ 
 }
 
 .flex-shrink-0 {

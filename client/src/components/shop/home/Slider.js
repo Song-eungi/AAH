@@ -65,12 +65,14 @@ const Slider = (props) => {
               />
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <a
-                href="#shop"
-                style={{ background: "#303031" }}
-                className="cursor-pointer box-border text-2xl text-white px-4 py-2 rounded"
+              <a style={{}}
+                href="/nut"
+                // style={{ background: "white" }}
+                className="cursor-pointer box-border text-shadow text-4xl text-black px-4 py-2 rounded"
               >
-                Shop Now
+                건강기능 별로 영양제의 성능을 찾아보세요<br/>
+               Look for nutritional functions by category
+
               </a>
             </div>
           </>

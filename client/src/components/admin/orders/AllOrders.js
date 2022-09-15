@@ -41,17 +41,17 @@ const AllCategory = (props) => {
         <table className="table-auto border w-full my-2">
           <thead>
             <tr>
-              <th className="px-4 py-2 border">Products</th>
-              <th className="px-4 py-2 border">Status</th>
-              <th className="px-4 py-2 border">Total</th>
-              <th className="px-4 py-2 border">Transaction Id</th>
-              <th className="px-4 py-2 border">Customer</th>
-              <th className="px-4 py-2 border">Email</th>
-              <th className="px-4 py-2 border">Phone</th>
-              <th className="px-4 py-2 border">Address</th>
-              <th className="px-4 py-2 border">Created at</th>
-              <th className="px-4 py-2 border">Updated at</th>
-              <th className="px-4 py-2 border">Actions</th>
+              <th className="px-4 py-2 border">상품</th>
+              <th className="px-4 py-2 border">상태</th>
+              <th className="px-4 py-2 border">개수</th>
+              <th className="px-4 py-2 border">아이디</th>
+              <th className="px-4 py-2 border">이름</th>
+              <th className="px-4 py-2 border">이메일</th>
+              <th className="px-4 py-2 border">전화번호</th>
+              <th className="px-4 py-2 border">주소</th>
+              <th className="px-4 py-2 border">주문 시간</th>
+              <th className="px-4 py-2 border">수정 시간</th>
+              <th className="px-4 py-2 border">편집</th>
             </tr>
           </thead>
           <tbody>
@@ -73,14 +73,14 @@ const AllCategory = (props) => {
                   colSpan="12"
                   className="text-xl text-center font-semibold py-8"
                 >
-                  No order found
+                  상품이 없습니다.
                 </td>
               </tr>
             )}
           </tbody>
         </table>
         <div className="text-sm text-gray-600 mt-2">
-          Total {orders && orders.length} order found
+          총 {orders && orders.length} 주문
         </div>
       </div>
     </Fragment>

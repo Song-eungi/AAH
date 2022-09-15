@@ -141,7 +141,7 @@ const AllReviews = (props) => {
             );
           })
         ) : (
-          <div>No Review found</div>
+          <div>작성된 리뷰가 없습니다. 리뷰를 남겨주세요.</div>
         )}
       </div>
     </Fragment>

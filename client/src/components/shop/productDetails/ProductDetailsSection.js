@@ -177,7 +177,7 @@ const ProductDetailsSection = (props) => {
               <div className="text-2xl tracking-wider">{sProduct.pName}</div>
               <div className="flex justify-between items-center">
                 <span className="text-xl tracking-wider text-yellow-700">
-                  ${sProduct.pPrice}.00
+                  {sProduct.pPrice}원
                 </span>
                 <span>
                   <svg
@@ -234,7 +234,7 @@ const ProductDetailsSection = (props) => {
                     quantitiy === sProduct.pQuantity && "text-red-500"
                   }`}
                 >
-                  Quantity
+                  개수
                 </div>
                 {/* Quantity Button */}
                 {sProduct.pQuantity !== 0 ? (
@@ -390,7 +390,7 @@ const ProductDetailsSection = (props) => {
                       style={{ background: "#303031" }}
                       className={`px-4 py-2 text-white text-center cursor-pointer uppercase`}
                     >
-                      Add to cart
+                      장바구니 담기
                     </div>
                   )}
                 </Fragment>

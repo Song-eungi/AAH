@@ -70,6 +70,32 @@ app.use("/api", brainTreeRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/customize", customizeRouter);
 
+
+const mysql = require('mysql');
+const db = mysql.createPool({
+    host : '127.0.0.1',
+    user : 'root',
+    password : 'asas4041',
+    database : 'apple'
+});
+
+app.get('/', (req, res) => {
+    res.send('연결 되었습니다.')
+});
+
+app.get('/api/concat', (req, res,) => {
+  db.query("SELECT * FROM apple.concat", (err, rows) => {
+    if (err) {
+        console.log('err');
+        res.send(err);
+    } else{
+        console.log('success');
+        res.send(rows);
+    }
+});
+});
+
+
 // Run Server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

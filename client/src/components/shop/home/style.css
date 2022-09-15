@@ -1,3 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Montserrat:wght@300&display=swap');
+.thumbnail img {
+  
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border: 1px solid #d3d3d3;
+}
+
+a {
+  /* font-family: 'Gowun Dodum', sans-serif; */
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  line-height: 1.5em;
+  font-size: 32px;
+  text-shadow: 0 1px 9px white;
+}
+
+p {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 .slider {
   -webkit-appearance: none;
   height: 12px;
@@ -6,6 +31,8 @@
   outline: none;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .slider::-webkit-slider-thumb {
@@ -25,3 +52,58 @@
   background: #b7791f;
   cursor: pointer;
 }
+
+
+.sssss {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: table-row;
+  
+}
+
+
+.image {
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  /* position: absolute; */
+  margin: auto;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+
