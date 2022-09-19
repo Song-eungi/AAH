@@ -19,11 +19,11 @@ const ProductCategory = (props) => {
             data.categoryListDropdown ? "text-yellow-700" : ""
           }`}
         >
-          <span className="text-md md:text-lg hover:text-yellow-700">
-            카테고리
+          <span className="font-bold text-2xl text-gray-800 hover:text-yellow-700">
+            Category
           </span>
           <svg
-            className="w-4 h-4 text-yellow-700"
+            className="w-10 h-10 text-yellow-700"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ const ProductCategory = (props) => {
           </svg>
         </div>
         <div className="flex space-x-2">
-          {/* <div
+          <div
             onClick={(e) =>
               dispatch({
                 type: "filterListDropdown",
@@ -49,10 +49,10 @@ const ProductCategory = (props) => {
               data.filterListDropdown ? "text-yellow-700" : ""
             }`}
           >
-            <span className="text-md md:text-lg">Filter</span>
+            <span className="font-bold text-1xl">가격 필터</span>
             <span>
               <svg
-                className="w-4 h-4 text-gray-700 text-yellow-700"
+                className="w-10 h-10 text-gray-700 text-yellow-700"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -66,7 +66,7 @@ const ProductCategory = (props) => {
                 ></path>
               </svg>
             </span>
-          </div> */}
+          </div>
           <span></span>
           <div
             onClick={(e) =>
@@ -79,10 +79,10 @@ const ProductCategory = (props) => {
               data.searchDropdown ? "text-yellow-700" : ""
             }`}
           >
-            <span className="text-md md:text-lg">검색</span>
+            <span className="font-bold text-1xl">검색</span>
             <span>
               <svg
-                className="w-4 h-4 text-gray-700 text-yellow-700"
+                className="w-10 h-10 text-gray-700 text-yellow-700"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

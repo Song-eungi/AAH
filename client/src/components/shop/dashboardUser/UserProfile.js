@@ -56,7 +56,7 @@ const ProfileComponent = () => {
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="shadow-lg border">
           <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
-            Personal Information
+            개인 정보
           </div>
           <hr />
           <div className="py-4 px-4 md:px-8 lg:px-16 flex flex-col space-y-4">
@@ -68,7 +68,7 @@ const ProfileComponent = () => {
               ""
             )}
             <div className="flex flex-col space-y-2">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name" className="font-bold">이름</label>
               <input
                 onChange={(e) => setFdata({ ...fData, name: e.target.value })}
                 value={fData.name}
@@ -78,7 +78,7 @@ const ProfileComponent = () => {
               />
             </div>
             <div className="flex flex-col space-y-2">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className="font-bold">이메일</label>
               <input
                 value={fData.email}
                 readOnly
@@ -87,11 +87,11 @@ const ProfileComponent = () => {
                 className="cursor-not-allowed border px-4 py-2 bg-gray-200 w-full focus:outline-none focus:cursor-not-allowed"
               />
               <span className="text-xs text-gray-500">
-                You can't change your email
+                메일을 변경할 수 없습니다
               </span>
             </div>
             <div className="flex flex-col space-y-2">
-              <label htmlFor="number">Phone Number</label>
+              <label htmlFor="number" className="font-bold">전화번호</label>
               <input
                 onChange={(e) => setFdata({ ...fData, phone: e.target.value })}
                 value={fData.phone}
@@ -103,9 +103,9 @@ const ProfileComponent = () => {
             <div
               onClick={(e) => handleSubmit()}
               style={{ background: "#303031" }}
-              className="w-full text-center cursor-pointer px-4 py-2 text-gray-100"
+              className="font-bold w-full text-center cursor-pointer px-4 py-2 text-gray-100"
             >
-              Update Information
+              정보 업데이트
             </div>
           </div>
         </div>

@@ -39,14 +39,16 @@ const CategoryList = () => {
                   onClick={(e) =>
                     history.push(`/products/category/${item._id}`)
                   }
-                  className="col-span-1 m-2 flex flex-col items-center justify-center space-y-2 cursor-pointer"
+                  className="hover:bg-gray-200  col-span-1 m-2 p-2 flex flex-col items-center justify-center space-y-2 cursor-pointer"
                 >
-                  <img
+                  {/* <img
                     src={`${apiURL}/uploads/categories/${item.cImage}`}
                     alt="pic"
-                  />
-                  <div className="font-medium">{item.cName}</div>
+                  /> */}
+                  <div className="font-bold text-xl ">{item.cName}</div>
+                  
                 </div>
+                
               </Fragment>
             );
           })
@@ -54,7 +56,9 @@ const CategoryList = () => {
           <div className="text-xl text-center my-4">No Category</div>
         )}
       </div>
+      <hr/>
     </div>
+    
   );
 };
 
@@ -192,7 +196,7 @@ const Search = () => {
         onChange={(e) => searchHandle(e)}
         className="px-4 text-xl py-4 focus:outline-none"
         type="text"
-        placeholder="Search products..."
+        placeholder="찾고 싶은 상품을 검색해보세요!"
       />
       <div onClick={(e) => closeSearchBar()} className="cursor-pointer">
         <svg

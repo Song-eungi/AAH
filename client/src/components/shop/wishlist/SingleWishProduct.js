@@ -59,7 +59,7 @@ const Product = () => {
                     src={`${apiURL}/uploads/products/${product.pImages[0]}`}
                     alt="wishListproduct"
                   />
-                  <div className="text-lg md:ml-6 truncate">
+                  <div className="text-lg md:ml-6 truncate font-bold">
                     {product.pName}
                   </div>
                 </div>
@@ -68,9 +68,9 @@ const Product = () => {
                     {product.pPrice}원
                   </div>
                   {product.pQuantity > 0 ? (
-                    <div className="text-green-500 my-1 md:my-0">재고 있음</div>
+                    <div className="text-green-500 my-1 md:my-0 font-bold">재고 있음</div>
                   ) : (
-                    <div className="text-red-500 my-1 md:my-0">재고 없음</div>
+                    <div className="text-red-500 my-1 md:my-0 font-bold">재고 없음</div>
                   )}
 
                   <div
@@ -100,7 +100,7 @@ const Product = () => {
             );
           })
         ) : (
-          <div>No product found in wishList</div>
+          <div>찜 리스트에 등록된 상품이 없습니다.</div>
         )}
       </div>
     </Fragment>
@@ -111,7 +111,7 @@ const SingleWishProduct = (props) => {
   return (
     <Fragment>
       <section className="mx-4 mt-20 md:mx-12 md:mt-32 lg:mt-24">
-        <div className="text-2xl mx-2 mb-6">찜 리스트</div>
+        <div className="text-2xl mx-2 mb-6 font-bold">찜 리스트</div>
         {/* Product List */}
         <Product />
       </section>

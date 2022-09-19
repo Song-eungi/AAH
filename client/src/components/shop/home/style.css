@@ -10,6 +10,16 @@
   border: 1px solid #d3d3d3;
 }
 
+.app {
+  font-size: 19px;
+}
+
+#country-select {
+  margin-bottom: 40px;
+}
+
+
+
 a {
   /* font-family: 'Gowun Dodum', sans-serif; */
   font-family: 'IBM Plex Sans KR', sans-serif;
@@ -105,5 +115,26 @@ p {
   transition-duration: 1s;
   transform: scale(1.08);
 }
+.nuttt {
+  font-size: 25px;
+  line-height: 1.5em;
+  font-weight: 400;
+}
 
+.bot {
+  bottom: 0;
+  right : 0;
+  position: fixed;
+  width: 350px;
+  /* background-color: #fff; */
+}
 
+/* .btn22 {
+  font-size: 20px;
+  float: right;
+  width: 100%;
+  padding: 8px;
+  background-color: rgb(183, 0, 255);
+  margin: 10px;
+
+} */

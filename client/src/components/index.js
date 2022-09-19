@@ -27,14 +27,14 @@ const Routes = (props) => {
         <Route exact path="/" component={Home} />
         <Route path="/nut" component={NutName}/>
         <Route exact path="/bmi" component={Bmi} />
+        <Route exact path="/user/orders" component={UserOrders} />
+        <Route exact path="/user/profile" component={UserProfile} />
+        <Route exact path="/user/setting" component={SettingUser} />
+        
+        
         <Route exact path="/wish-list" component={WishList} />
         <Route path="/health:category?" component={NewsPage} />
         <Route exact path="/products/:id" component={ProductDetails} />
-       
-       
-        
-        
-    
        
         <Route
           exact

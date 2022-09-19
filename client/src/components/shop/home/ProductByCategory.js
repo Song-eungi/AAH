@@ -11,15 +11,15 @@ const Submenu = ({ category }) => {
     <Fragment>
       {/* Submenu Section */}
       <section className="mx-4 mt-24 md:mx-12 md:mt-32 lg:mt-24">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-10">
           <div className="text-sm flex space-x-3">
             <span
-              className="hover:text-yellow-700 cursor-pointer"
+              className="hover:text-yellow-700 cursor-pointer font-bold text-3xl"
               onClick={(e) => history.push("/")}
             >
               Shop
             </span>
-            <span className="text-yellow-700 cursor-default">{category}</span>
+            <span className="text-yellow-700 cursor-default font-bold text-3xl" >{category}</span>
           </div>
           <div>
             <svg
@@ -64,7 +64,7 @@ const AllProduct = ({ products }) => {
                     alt=""
                   />
                   <div className="flex items-center justify-between mt-2">
-                    <div className="text-gray-600 font-light truncate">
+                    <div className="text-gray-800 font-bold text-1xl truncate">
                       {item.pName}
                     </div>
                     <div className="flex items-center space-x-1">
@@ -89,7 +89,7 @@ const AllProduct = ({ products }) => {
                       </span>
                     </div>
                   </div>
-                  <div>{item.pPrice}.00$</div>
+                  <div className="font-bold text-yellow-700">{item.pPrice}원</div>
                   <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
                     <svg
                       className="w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700"

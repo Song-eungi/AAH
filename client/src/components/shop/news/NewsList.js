@@ -50,9 +50,13 @@ const NewsList = ({ category }) => {
   // articles 값이 유효할 때
   return (
     <NewsListBlock>
+      <div className="nneeww2">
+      <div id="nneeww" className="text-5xl font-bold leading-relaxed mb-12 text-center drop-shadow-xl  shadow-lg shadow-indigo-500/50 ">매 시간 마다 업데이트 되는 <br/> 모든 한국의 건강 뉴스를 만나보세요!</div>
+      </div>
       {articles.map((article) => (
         <NewsItem key={article.url} article={article} />
       ))}
+     
     </NewsListBlock>
   );
 };

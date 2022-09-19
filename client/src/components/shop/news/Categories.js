@@ -17,7 +17,7 @@ const categories = [
   // },
   {
     name: "health",
-    text: "Health News",
+    text: "",
   },
   // {
   //   name: "science",

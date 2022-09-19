@@ -8,3 +8,36 @@
   flex-direction: column;
   transition: all 1s;
 }
+
+#nneeww{
+  /* background-color: rgba(255, 255, 255, 0.397); */
+  background-color: rgba(255, 255, 255, 0.384);
+  text-shadow: 2px 3px 4px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+
+.nneeww2 {
+  background: url("./old-retro-newspaper-spread-pages-background-poster-vintage-newspaper-pages-seamless-pattern-newsprint-vector-background-illustration-retro-newspaper-page-backdrop_229548-2373.jpg") no-repeat left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+
+}
+
+.apap {
+  background: url("./medical-composition-with-pills.jpg") no-repeat left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.apap2 {
+  background: url("./flay-lay-scale-weights.jpg") no-repeat left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}

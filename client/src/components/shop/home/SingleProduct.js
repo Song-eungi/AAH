@@ -65,18 +65,19 @@ const SingleProduct = (props) => {
               <div className="relative col-span-1 m-2">
                 <img
                   onClick={(e) => history.push(`/products/${item._id}`)}
-                  className="w-full object-cover object-center cursor-pointer"
+                  className="w-80 h-80 object-cover object-center cursor-pointer"
                   src={`${apiURL}/uploads/products/${item.pImages[0]}`}
                   alt=""
                 />
                 <div className="flex items-center justify-between mt-2">
-                  <div className="text-gray-600 font-light truncate">
+                  <div className="font-bold text-1xl leading-tight text-gray-800">
+              
                     {item.pName}
                   </div>
                   <div className="flex items-center space-x-1">
                     <span>
                       <svg
-                        className="w-4 h-4 fill-current text-yellow-700"
+                        className="w-4 h-4 fill-current text-yellow-600"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -95,7 +96,7 @@ const SingleProduct = (props) => {
                     </span>
                   </div>
                 </div>
-                <div>{item.pPrice}원</div>
+                <div className="font-bold text-1xl text-yellow-700 " >{item.pPrice}원</div>
                 {/* WhisList Logic  */}
                 <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
                   <svg

@@ -25,6 +25,7 @@ function Bmi() {
 
       if (bmi < 18.5) {
         setMessage('저체중입니다. 살좀 쪄야 겠어요;')
+
       } else if (bmi >= 18.5 && bmi < 22.9) {
         setMessage('딱 건강한 체중입니다')
       } else {
@@ -48,42 +49,57 @@ function Bmi() {
     }
   }
 
+  // let hrSrc;
+
+  // if (bmi < 1) {
+  //   hrSrc = null
+  // } else {
+  //   if(bmi < 18.5) {
+  //     hrSrc = require("./imgs/underweight.jpg")
+  //   } else if (bmi >= 18.5 && bmi < 22.9) {
+  //     hrSrc = require("./imgs/healthy.jpg")
+  //   } else {
+  //     hrSrc = require("www.naver.com")
+  //   }
+  // }
+
 
   let reload = () => {
     window.location.reload()
   }
 
   return (
-    <div className="app">
+    <div className='apap2'>
+    <div className="app2">
       <div className='container'>
-        <h3 className='center'>BMI</h3>
+        <h3 className='center font-bold text-5xl'>BMI</h3>
         <form onSubmit={calcBmi}>
-          <div>
-            <label>체중 </label>
+        <div className='mb-5'>
+            <label className='font-bold'> 키 </label>
+            <input value={height} onChange={(event) => setHeight(event.target.value)} />
+          </div>
+          <div className='mb-8'>
+            <label className='font-bold' >체중 </label>
             <input value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
           <div>
-            <label> 키 </label>
-            <input value={height} onChange={(event) => setHeight(event.target.value)} />
-          </div>
-          <div>
-            <button className='btn' type='submit'>RESULT</button>
-            <button className='btn btn-outline' onClick={reload} type='submit'>RESET</button>
+            <button className='btn font-bold' type='submit'>RESULT</button>
+            <button className='btn btn-outline font-bold' onClick={reload} type='submit'>RESET</button>
           </div>
         </form>
 
         <div className='center'>
-          <h2>YOUR BMI : {bmi}</h2>
+          <h2 className=' text-4xl mt-10'>당신의 BMI는? {bmi}</h2>
           <h3>{message}</h3>
          
         </div>
        
-        <div className='img-container'>
-          <img src={imgSrc} alt='' className='center'></img>
+        <div className='center'>
+          <img src={imgSrc} alt=''></img>
         </div>
-    
-        
+         
       </div>
+    </div>
     </div>
   );
 }

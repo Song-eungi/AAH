@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
             {children}
           </div>
         </div>
+
         <Footer />
       </DashboardUserContext.Provider>
     </Fragment>

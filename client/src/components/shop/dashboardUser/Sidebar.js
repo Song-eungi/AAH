@@ -31,8 +31,8 @@ const Sidebar = (props) => {
             />
           </svg>
           <div className="flex flex-col w-full">
-            <span className="text-sm">Hello,</span>
-            <span className="text-lg">
+            <span className="text-xl">안녕하세요,</span>
+            <span className="text-1xl">
               {data.userDetails ? data.userDetails.name : ""}
             </span>
           </div>
@@ -44,9 +44,9 @@ const Sidebar = (props) => {
               location.pathname === "/user/orders"
                 ? "border-r-4 border-yellow-700 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-gray-200 cursor-pointer font-bold`}
           >
-            My Orders
+            나의 주문
           </div>
           <hr />
           <div
@@ -55,16 +55,16 @@ const Sidebar = (props) => {
               location.pathname === "/user/profile"
                 ? "border-r-4 border-yellow-700 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-gray-200 cursor-pointer font-bold`}
           >
-            My Accounts
+            나의 계정
           </div>
           <hr />
           <div
             onClick={(e) => history.push("/wish-list")}
-            className={` px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            className={` px-4 py-4 hover:bg-gray-200 cursor-pointer font-bold`}
           >
-            My Wishlist
+            나의 찜리스트
           </div>
           <hr />
           <div
@@ -73,9 +73,9 @@ const Sidebar = (props) => {
               location.pathname === "/user/setting"
                 ? "border-r-4 border-yellow-700 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-gray-200 cursor-pointer font-bold`}
           >
-            Setting
+            나의 정보변경
           </div>
           <hr />
           <div
@@ -84,9 +84,9 @@ const Sidebar = (props) => {
               location.pathname === "/admin/dashboard/categories"
                 ? "border-r-4 border-yellow-700 bg-gray-200"
                 : ""
-            }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
+            }  px-4 py-4 hover:bg-gray-200 cursor-pointer font-bold`}
           >
-            Logout
+            로그아웃
           </div>
         </div>
       </div>

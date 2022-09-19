@@ -38,7 +38,9 @@ const NewsItemBlock = styled.div`
 const NewsItem = ({ article }) => {
   const { title, description, url, urlToImage } = article;
   return (
+    
     <NewsItemBlock>
+      
       {urlToImage && (
         <div className="thumbnail">
           <a href={url} target="_blank" rel="noopener noreferrer">
@@ -47,7 +49,9 @@ const NewsItem = ({ article }) => {
         </div>
       )}
       <div className="box">
+      
       <div className="contents">
+        
         <h2>
           <a href={url} target="_blank" rel="noopener noreferrer">
             {title}

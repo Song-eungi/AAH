@@ -67,12 +67,22 @@ function NutName() {
 
     
      <Navber/>
+     <div className='apap'>
       <div className='app'>
        
       
-      <div class= "container">
-      <h3>Nutrients</h3>
-      <div class ="form-row">
+      <div className= "container">
+      <h3 className='font-bold text-4xl'>영양제 성능 검색</h3>
+      <div className='text-xm text-center leading-normal '>
+      <strong><span className='text-3xl '>공공데이터포털 사이트</span>에서 제공하고 있는 <span className='text-3xl'>건강기능식품 API</span> 를 통해 수집</strong> <br/>
+      <a href='https://www.data.go.kr/index.do' className='text-xm'>data.go.kr</a>
+      <br/><p className='text-gray-700'> 공공데이터포털이란? 
+      국가에서 보유하고 있는 다양한 데이터를 공유•활용할 수 있도록 공공데이터(Dataset)와 Open API로 제공하는 사이트입니다.
+      <br/>
+      
+      </p> </div>
+      <br/>
+      <div className ="form-row">
       <label> 건강 기능을 선택해주세요</label>
       
         <select id="country-select" defaultValue="default" onClick={selectNut}>
@@ -86,11 +96,11 @@ function NutName() {
         <br></br>
 
       </div>
-      <div class ="form-row">
+      <div className ="form-row">
       <label>영양제를 선택해주세요</label>
      
         <select id="location-select" defaultValue="default" onClick={selectLocation}>
-          <option class="dd" value="default" disabled>
+          <option className="dd" value="default" disabled>
             Choose a Nutrients ...
           </option>
           {[...new Set(nutLocations)].map((nutLocations, key) => (
@@ -100,19 +110,18 @@ function NutName() {
         <br></br>
 
       </div>
-      <div class ="form-row">
+      <div className ="form-row">
       <label></label>
-        <div id="nut-select" defaultValue="default">
-
-          {nutNames.map((nutNames, key) => (
-            <div value={nutNames} key={key}>{nutNames}</div>
-           
+        <div  id="nut-select" defaultValue="default">
+            {[...new Set(nutNames)].map((nutNames, key) => (
+              <div className='nuttt' value={nutNames} key={key}>{nutNames}</div>
           ))}
         </div>
       </div>
 
       </div>
 
+      </div>
       </div>
       <Footer/>
       </div>
@@ -121,3 +130,4 @@ function NutName() {
 }
 
 export default NutName;
+

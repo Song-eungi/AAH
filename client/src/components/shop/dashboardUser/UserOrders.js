@@ -10,13 +10,13 @@ const TableHeader = () => {
     <Fragment>
       <thead>
         <tr>
-          <th className="px-4 py-2 border">Products</th>
-          <th className="px-4 py-2 border">Status</th>
-          <th className="px-4 py-2 border">Total</th>
-          <th className="px-4 py-2 border">Phone</th>
-          <th className="px-4 py-2 border">Address</th>
-          <th className="px-4 py-2 border">Transaction Id</th>
-          <th className="px-4 py-2 border">Checkout</th>
+          <th className="px-4 py-2 border">상품</th>
+          <th className="px-4 py-2 border">상태</th>
+          <th className="px-4 py-2 border">주문금액</th>
+          <th className="px-4 py-2 border">전화번호</th>
+          <th className="px-4 py-2 border">주호</th>
+          <th className="px-4 py-2 border">아이디</th>
+          <th className="px-4 py-2 border">주문시간</th>
           <th className="px-4 py-2 border">Processing</th>
         </tr>
       </thead>
@@ -38,7 +38,7 @@ const TableBody = ({ order }) => {
                   alt="productImage"
                 />
                 <span>{product.id.pName}</span>
-                <span>{product.quantitiy}x</span>
+                <span>{product.quantitiy}개</span>
               </span>
             );
           })}
@@ -71,7 +71,7 @@ const TableBody = ({ order }) => {
           )}
         </td>
         <td className="hover:bg-gray-200 p-2 text-center">
-          ${order.amount}.00
+          {order.amount}원
         </td>
         <td className="hover:bg-gray-200 p-2 text-center">{order.phone}</td>
         <td className="hover:bg-gray-200 p-2 text-center">{order.address}</td>
@@ -123,7 +123,7 @@ const OrdersComponent = () => {
       <div className="flex flex-col w-full my-4 md:my-0 md:w-9/12 md:px-8">
         <div className="border">
           <div className="py-4 px-4 text-lg font-semibold border-t-2 border-yellow-700">
-            Orders
+            주문 내역
           </div>
           <hr />
           <div className="overflow-auto bg-white shadow-lg p-4">
@@ -147,7 +147,7 @@ const OrdersComponent = () => {
               </tbody>
             </table>
             <div className="text-sm text-gray-600 mt-2">
-              Total {orders && orders.length} order found
+              총 {orders && orders.length} 주문
             </div>
           </div>
         </div>

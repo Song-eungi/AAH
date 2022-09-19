@@ -15,7 +15,7 @@ body {
 
 }
 .app {
-    background-color: rgba(255, 255, 255, 0.61);
+    /* background-color: rgba(145, 145, 145, 0.274); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@ body {
 .container {
     width: 800px;
             padding: 25px;
-            background-color: rgba(247, 245, 245, 0.664);
+            background-color: rgba(247, 245, 245, 0.918);
             box-sizing: border-box;
             box-shadow: 0 0 35px rgba(0, 0, 0, 0.205);
 }
@@ -53,6 +53,8 @@ body {
 h3 {
     text-align: center;
     font-size: 35px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #2d3748;
+    
 
 }
