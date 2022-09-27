@@ -5,6 +5,7 @@ import {
 } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
+import './Navbar.css';
 
 function SocialMedia() {
   return (
@@ -14,7 +15,7 @@ function SocialMedia() {
           href="https://github.com/sunilyadav8"
           target="_blank"
           rel="noreferrer"
-          className="icon-colour  home-social-icons center"
+          className="icon-colour  home-social-icons"
         >
           <AiFillGithub className="social-icon" />
         </a>

@@ -1,81 +1,73 @@
-import React from "react";
-import  { useContext, useState } from 'react'
-// import Brightness2Icon from '@material-ui/icons/Brightness2'
-// import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
-import { ThemeContext } from './thema'
-import { projects, skills, contact } from './portfolio'
-// import './Navbar.css'
+import React, { useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import {Button} from './Button';
+import './Navbar.css';
 
-const Navbar = () => {
-//   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
-  const [showNavList, setShowNavList] = useState(false)
+function Navbar() {
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
 
-  const toggleNavList = () => setShowNavList(!showNavList)
 
-  return (
-    <nav className='center nav'>
-      <ul
-        style={{ display: showNavList ? 'flex' : null }}
-        className='nav__list'
-      >
-        {projects.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#projects'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Projects
-            </a>
-          </li>
-        ) : null}
+    const handleClick = () => setClick(!click) ;
+    const closeMobileMenu = () => setClick(false);
 
-        {skills.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#skills'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Skills
-            </a>
-          </li>
-        ) : null}
+    // 화면 크기에 따라서 버튼이 보이고 안보이도록 설정한다. 
+    const showButton = () => {
+        if(window.innerWidth <= 960){
+            setButton(false)
+        }
+        else {
+            setButton(true);
+        }
+    };
 
-        {contact.email ? (
-          <li className='nav__list-item'>
-            <a
-              href='#contact'
-              onClick={toggleNavList}
-              className='link link--nav'
-            >
-              Contact
-            </a>
-          </li>
-        ) : null}
-      </ul>
+    // SIGNUP버튼이 사이즈가 줄어들면 없어지도록 한다. 
+    useEffect(() => {
+        showButton();
+    }, []);
 
-      {/* <button
-        type='button'
-        onClick={toggleTheme}
-        className='btn btn--icon nav__theme'
-        aria-label='toggle theme'
-      >
-        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-      </button> */}
 
-      <button
-        type='button'
-        onClick={toggleNavList}
-        className='btn btn--icon nav__hamburger'
-        aria-label='toggle navigation'
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
-      </button>
-    </nav>
-  )
+    window.addEventListener('resize', showButton);
+
+    return (
+        <>
+        <nav className = 'navbar'>
+            <div className = 'navbar-container'>
+                {/* 모바일버전에서 클릭하면 메뉴 보이도록 설정하는 것도 한다. (close Mobile Menu)는 다시 버튼 누르면 없어지고 생기고 하도록 한다.  */}
+                <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+                    TRVL 
+                    <i className='fab fa-typo3' />
+                </Link>
+                <div className='menu-icon' onClick={handleClick}>
+                    <i className = {click ? 'fas fa-times' : 'fas fa-bars' } />
+                </div>
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className='nav-item'>
+                        <Link to='/' className='nav-links' onClick = {closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/services' className='nav-links' onClick = {closeMobileMenu}>
+                            Services
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/products' className='nav-links' onClick = {closeMobileMenu}>
+                            Products
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/sign-up' className='nav-links-mobile' onClick = {closeMobileMenu}>
+                            Sign Up
+                        </Link>
+                    </li>
+                </ul>
+                {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+            </div>
+        </nav>
+        </>
+    );
 }
 
 export default Navbar
