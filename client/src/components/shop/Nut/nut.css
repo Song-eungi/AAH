@@ -14,21 +14,17 @@ body {
     
 
 }
-.app {
-    /* background-color: rgba(145, 145, 145, 0.274); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;     
-}
 
-.container {
+
+.container22 {
+    /* box-shadow: 0px 0px 12px #ccc; */
+    /* border-radius: 20px; */
+    padding: 1rem;
+    margin: auto;
     width: 800px;
-            padding: 25px;
-            background-color: rgba(247, 245, 245, 0.918);
-            box-sizing: border-box;
-            box-shadow: 0 0 35px rgba(0, 0, 0, 0.205);
-}
+  }
+
+
 
 .form-row label {
     font-weight: bold;

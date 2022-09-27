@@ -15,6 +15,7 @@ import { UserProfile, UserOrders, SettingUser } from "./shop/dashboardUser";
 import Bmi from "./shop/Bmi/BmiCal";
 import NutName from "./shop/Nut/nutName.js";
 import NewsPage from "./shop/news/NewsPage.js";
+import About from "./Home/Home";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -30,6 +31,7 @@ const Routes = (props) => {
         <Route exact path="/user/orders" component={UserOrders} />
         <Route exact path="/user/profile" component={UserProfile} />
         <Route exact path="/user/setting" component={SettingUser} />
+        <Route exact path="/About" component={About} />
         
         
         <Route exact path="/wish-list" component={WishList} />
