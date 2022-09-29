@@ -96,6 +96,47 @@ app.get('/api/concat', (req, res,) => {
 });
 
 
+
+//
+// const multer = require('multer');
+// const path = require('path');
+// const uploader = multer({
+//     storage: multer.diskStorage({
+//         destination(req,file,cb){
+//             cb(null, 'upload/');
+//         },
+//         filename(req,file,cb){
+//             const ext = path.extname(file.originalname);
+//             cb(null, 'file_'+Date.now()+ext);
+//         }
+//     }),
+//     limits: {fileSize: 5*1024*1024},
+// });
+// const spawn = require('child_process').spawn
+
+
+// app.post('/', uploader.single('image'),async(req,res)=>{
+//     //spawn으로 파이썬 스크립트 실행
+//     //실행할 파일(app.py)와  매개변수로 저장된 파일명을 전달
+//     const net = spawn('python',['app.py',req.file.filename]);
+    
+//     //파이썬 파일 수행 결과를 받아온다
+//     net.stdout.on('data', function(data) { 
+//         console.log(data);
+//         console.log(data.toString());
+//         if(data.toString() == 'nsfw')
+//             res.status(200).send('nsfw')
+//         else
+//             res.status(200).send('sfw')
+//     })
+// })
+
+
+
+
+
+
+
 // Run Server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

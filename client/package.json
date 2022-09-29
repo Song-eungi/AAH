@@ -12,6 +12,7 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.6.2",
     "braintree-web-drop-in-react": "^1.2.1",
+    "child-process": "^1.0.2",
     "moment": "^2.29.0",
     "react": "^16.13.1",
     "react-bootstrap": "^2.5.0",

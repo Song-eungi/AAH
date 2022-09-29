@@ -29,10 +29,10 @@ const Layout = ({ children }) => {
           <SimpleForm></SimpleForm>
         </div>      
         {/* <div> {showChat ? <SimpleForm></SimpleForm> : null} </div> */}
-        <div>
+        <div className="botbtm h-30">
           {!showChat 
-            ? <button className="btn" onClick={() => startChat()}>click to chat... </button> 
-            : <button className="btn" onClick={() => hideChat()}>click to hide... </button>}
+            ? <button className="btn22" onClick={() => startChat()}>ㅤ</button> 
+            : <button className="btn22" onClick={() => hideChat()}>ㅤ</button>}
         </div>
       </div>      
         

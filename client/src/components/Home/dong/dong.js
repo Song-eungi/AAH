@@ -1,13 +1,13 @@
 import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 // import {Button} from './Button';
-import './Navbar.css';
+import '../Navbar.css';
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "./Assets/song.jpg";
+import myImg from "./dong.jpg";
 import SocialMedia from "./SocialMedia";
 import TypeWriter from "./TypeWriter";
 
-function Navbar() {
+function Dong() {
     const [click, setClick] = useState(false);
     // const [button, setButton] = useState(true);
 
@@ -99,13 +99,12 @@ function Navbar() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> Song Eun Ji</strong>
+                <strong className="main-name">  Yoon Dong min</strong>
               </h1>
 
               <div className="heading-description blockquote mt-6 font-weight: 700 ">
-               저는 이 프로젝트에서 <span className="wave text-red-700">팀장</span>으로, 프로젝트의 총 책임을 맡았습니다.
-               제가 맡은 역할은 <span className="wave text-red-700">백엔드</span >와 <span className="wave text-red-700">프론트엔드</span>개발 입니다. 백엔드로는 Node.js와 MySQL, MongoDB를 통해 서버를 구성했고 프론트엔드로는 React와 JS를 통해 UI를 개발했습니다.
-                
+              전느 이프로젝트에서 백엔드 부분을 맡아 
+              기본적인 <span className="wave text-red-700">백엔드 구조</span> 및< span className="wave text-red-700"> mongodb 서버 로그인 </span>  부분을 구현해였습니다.
 
               </div>
               
@@ -146,4 +145,4 @@ function Navbar() {
     );
 }
 
-export default Navbar
+export default Dong

@@ -4,7 +4,7 @@ import Slider from "./Slider";
 import ProductCategory from "./ProductCategory";
 import { homeState, homeReducer } from "./HomeContext";
 import SingleProduct from "./SingleProduct";
-import SimpleForm from './SimpleForm';
+import SimpleFormm from './SimpleForm.js';
 // import { SubSlider } from "./ImageSlider";
 
 export const HomeContext = createContext();
@@ -47,13 +47,13 @@ const Home = (props) => {
         <Layout children={<HomeComponent />} />
         <div className = "bot">
         <div style ={{display: showChat ? "" : "none"}}>
-          <SimpleForm></SimpleForm>
+          <SimpleFormm></SimpleFormm>
         </div>      
         {/* <div> {showChat ? <SimpleForm></SimpleForm> : null} </div> */}
-        <div>
+        <div className="h-30">
           {!showChat 
-            ? <button className="btn22" onClick={() => startChat()}>click to chat... </button> 
-            : <button className="btn22" onClick={() => hideChat()}>click to hide... </button>}
+            ? <button className="btn22" onClick={() => startChat()}>ㅤ</button> 
+            : <button className="btn22" onClick={() => hideChat()}>ㅤ</button>}
         </div>
       </div>      
       </HomeContext.Provider>

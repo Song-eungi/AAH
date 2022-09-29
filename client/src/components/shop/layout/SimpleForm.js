@@ -1,115 +1,153 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
-import Review from './Review';
+
+
+//////  고쳐야 할 부분  ////////////
+//////  1. import link 변경하기 ////
+//////  2. url 바뀌는지 확인 해야됨
 
 class SimpleForm extends Component {
-    render() {
-      return (
-        <ChatBot
-          steps={[
-            {
-              id: '1',
-              message: 'What is your name?',
-              trigger: 'name',
-            },
-            {
-              id: 'name',
-              user: true,
-              trigger: '3',
-            },
-            {
-              id: '3',
-              message: 'Hi {previousValue}! What is your gender?',
-              trigger: 'gender',
-            },
-            {
-              id: 'gender',
-              options: [
-                { value: 'male', label: 'Male', trigger: '5' },
-                { value: 'female', label: 'Female', trigger: '5' },
-              ],
-            },
-            {
-              id: '5',
-              message: 'How old are you?',
-              trigger: 'age',
-            },
-            {
-              id: 'age',
-              user: true,
-              trigger: '7',
-              validator: (value) => {
-                if (isNaN(value)) {
-                  return 'value must be a number';
-                } else if (value < 0) {
-                  return 'value must be positive';
-                } else if (value > 120) {
-                  return `${value}? Come on!`;
-                }
-  
-                return true;
+  render() {
+    return (
+      <ChatBot
+        steps={[
+          {
+            id: '1',
+            message: '안녕하세요. AAH 챗봇입니다.',
+            trigger: '2',
+          },
+    
+          {
+            id: '2',
+            message: '무엇을 도와드릴까요?',
+            trigger:'choice',
+          },
+          {
+            id:'choice',
+            options: [
+              { 
+                value: 1,
+                label: '영양제 카테고리',
+                trigger: 'category'
               },
-            },
-            {
-              id: '7',
-              message: 'Great! Check out your summary',
-              trigger: 'review',
-            },
-            {
-              id: 'review',
-              component: <Review />,
-              asMessage: true,
-              trigger: 'update',
-            },
-            {
-              id: 'update',
-              message: 'Would you like to update some field?',
-              trigger: 'update-question',
-            },
-            {
-              id: 'update-question',
-              options: [
-                { value: 'yes', label: 'Yes', trigger: 'update-yes' },
-                { value: 'no', label: 'No', trigger: 'end-message' },
-              ],
-            },
-            {
-              id: 'update-yes',
-              message: 'What field would you like to update?',
-              trigger: 'update-fields',
-            },
-            {
-              id: 'update-fields',
-              options: [
-                { value: 'name', label: 'Name', trigger: 'update-name' },
-                { value: 'gender', label: 'Gender', trigger: 'update-gender' },
-                { value: 'age', label: 'Age', trigger: 'update-age' },
-              ],
-            },
-            {
-              id: 'update-name',
-              update: 'name',
-              trigger: '7',
-            },
-            {
-              id: 'update-gender',
-              update: 'gender',
-              trigger: '7',
-            },
-            {
-              id: 'update-age',
-              update: 'age',
-              trigger: '7',
-            },
-            {
-              id: 'end-message',
-              message: 'Thanks! Your data was submitted successfully!',
-              end: true,
-            },
-          ]}
-        />
-      );
-    }
+              { 
+                value: 2,
+                label: '주문 내역',
+                trigger: 'orderpage-msg'
+              },
+              { 
+                value: 3, 
+                label: '나의 정보 수정', 
+                trigger: 'profile-msg' 
+              },
+            ],
+          },
+          ///////// 카테고리 선택시   //////////////
+          {
+            id:'category',
+            message: '도움이 필요한 카테고리를 고르세요',
+            trigger : 'category-list'
+          },
+          {
+            id:'category-list',
+            options: [
+              { 
+                value: 1,
+                label: '장',
+                component:<a href='/products/category/6321ac9dbcaa9f0f9066f9c5'> <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcAVvE3%2FbtrNgbg6qnX%2FMLadkLiEnfOOeffu6djoV1%2Fimg.png" className='w-12 h-12'></img></a>,
+                end:true,
+              },
+              { 
+                value: 2,
+                label: '다이어트',
+                component:<a href='/products/category/6321ac80bcaa9f0f9066f9c1'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F07eXw%2FbtrNmzUkJNw%2F5fcUv5QBBuqhHQMnekAU60%2Fimg.png" className="w-12 h-12"></img></a>,
+                end:true,
+              },
+              { 
+                value: 3,
+                label: '혈압',
+                component:<a href='/products/category/6321ac70bcaa9f0f9066f9bd'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc6ch86%2FbtrNmyA7T2y%2FXPs8wbqwONQENztJDaM2z0%2Fimg.png" className="w-12 h-12"></img></a>,
+                end:true,
+              },
+              { 
+                value: 4,
+                label: '혈당',
+                component:<a href='/products/category/6321ac63bcaa9f0f9066f9b9'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkCCV9%2FbtrNhhajFIQ%2FZI1PAaoXKhuYziKruAkeP1%2Fimg.png" className="w-12 h-12"></img><br/></a>,
+                end:true,
+              },
+              { 
+                value: 5,
+                label: '눈',
+                component:<a href='/products/category/6321ac48bcaa9f0f9066f9b1'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbGZj8o%2FbtrNjpSBnju%2FlPjIBcAW41lzVfX775cTR0%2Fimg.png" className="w-12 h-12"></img></a>,
+                end:true,
+              },
+              { 
+                value: 6,
+                label: '수면',
+                component:<a href='/products/category/6321ac63bcaa9f0f9066f9b9'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcMFgyb%2FbtrNjp58Hbz%2FMbZYK4qzGJGrKps1XYT46K%2Fimg.png" className="w-12 h-12"></img></a>,
+                end:true,
+              },
+              { 
+                value: 7,
+                label: '간',
+                component:<a href='/products/category/6321ac2dbcaa9f0f9066f9ad'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOAs8s%2FbtrNj92Th3k%2Fn3OCqKIyMOgusyzkqTclTk%2Fimg.png" className="w-12 h-12"></img></a>,
+                end:true,
+              },
+              { 
+                value: 8,
+                label: '뼈',
+                component:<a href='/products/category/6321ac1dbcaa9f0f9066f9a9'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbOxyft%2FbtrNlRgwc4o%2Fpm1rCEu2BnB7C7tldNnkj0%2Fimg.png" className="w-12 h-12"></img></a>,
+                end:true,
+              },
+            ],
+          },
+          ///////// 각 카테고리 선택시   //////////////
+          /// 만들까 말까....
+          // {
+          //   id:'orderpage-msg',
+          //   message: '도움이 필요한 카테고리를 고르세요',
+          //   trigger : 'category-list'
+          // },
+          // {
+          //   id:'category-list',
+          //   options: [
+          //     { 
+          //       value: 1,
+          //       // label: '장',
+          //       component:<a href='/products/category/6321ac9dbcaa9f0f9066f9c5'> <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcAVvE3%2FbtrNgbg6qnX%2FMLadkLiEnfOOeffu6djoV1%2Fimg.png" className='w-12 h-12'></img></a>,
+          //       end:true,
+          //     },
+          //     { 
+          //       value: 2,
+          //       // label: '다이어트',
+          //       component:<a href='/products/category/6321ac80bcaa9f0f9066f9c1'><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F07eXw%2FbtrNmzUkJNw%2F5fcUv5QBBuqhHQMnekAU60%2Fimg.png" className="w-12 h-12"></img></a>,
+          //       end:true,
+          //     },
+
+          ///////// 주문 내역 선택시   //////////////
+          {
+            id:'orderpage-msg',
+            // message: '주문 내역 페이지로 이동합니다.',
+            component:<a href='/user/orders'><p className='chatp'>ORDER</p></a>,
+            end:true,
+          },
+          ///////// 정보 수정 선택시   //////////////
+          {
+            id:'profile-msg',
+            // message: '정보 수정 페이지로 이동합니다.',
+            component:<a href='/user/setting'><p className='chatp'>MODIFY</p></a>,
+            end:true,
+          },
+          /////////   종료   //////////////
+          {
+            id: 'end-msg',
+            message: '종료',
+            end:true,
+          },
+        ]}
+      />
+    );
   }
-  
-  export default SimpleForm;
+}
+
+export default SimpleForm;

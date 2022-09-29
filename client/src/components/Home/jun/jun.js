@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 // import {Button} from './Button';
 import './Navbar.css';
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "./Assets/song.jpg";
+import myImg from "./jun.jpg";
 import SocialMedia from "./SocialMedia";
 import TypeWriter from "./TypeWriter";
 
-function Navbar() {
+function Jun() {
     const [click, setClick] = useState(false);
     // const [button, setButton] = useState(true);
 
@@ -99,14 +99,11 @@ function Navbar() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> Song Eun Ji</strong>
+                <strong className="main-name"> Park Jun yong</strong>
               </h1>
-
+              {/* <span className="wave text-red-700"> */}
               <div className="heading-description blockquote mt-6 font-weight: 700 ">
-               저는 이 프로젝트에서 <span className="wave text-red-700">팀장</span>으로, 프로젝트의 총 책임을 맡았습니다.
-               제가 맡은 역할은 <span className="wave text-red-700">백엔드</span >와 <span className="wave text-red-700">프론트엔드</span>개발 입니다. 백엔드로는 Node.js와 MySQL, MongoDB를 통해 서버를 구성했고 프론트엔드로는 React와 JS를 통해 UI를 개발했습니다.
-                
-
+              프로젝트 프론트엔드부분을 맞아 React를 사용해 <span className="wave text-red-700"> 프론트엔드</span> 구성과 스타일 그리고 <span className="wave text-red-700"> Simple-react-chatbot</span>을 이용해 챗봇을 구성하였습니다.
               </div>
               
 
@@ -146,4 +143,4 @@ function Navbar() {
     );
 }
 
-export default Navbar
+export default Jun

@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .thumbnail img {
   
   display: block;
@@ -126,15 +129,33 @@ p {
   right : 0;
   position: fixed;
   width: 350px;
+  margin-right: 20px;
   /* background-color: #fff; */
 }
 
-/* .btn22 {
-  font-size: 20px;
-  float: right;
-  width: 100%;
-  padding: 8px;
-  background-color: rgb(183, 0, 255);
-  margin: 10px;
+.btn22 {
+  background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fse89v%2FbtrNiddfbn7%2FeLVzWkAItIWuBwMZvf8pKk%2Fimg.png);
+  background-size: contain;
+  background-repeat:no-repeat;
+  float: right !important;
+  max-width: 300px  !important;
+  max-height: 300px  !important;
+  margin: 10px !important;
+  padding: 30px 30px;
 
-} */
+}
+
+.chatp {
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
+  text-align: center; 
+  color: #c376f0;
+  text-shadow: 5px 5px #3c3d97;
+  margin: 0;
+  /* text-decoration: overline underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 5px; */
+
+
+
+}
