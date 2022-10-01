@@ -1,18 +1,14 @@
-var spawn = require('child_process').spawn;
-
-// 2. spawn을 통해 "python 파이썬파일.py" 명령어 실행
-const result = spawn('py', ['./d.py', 'param1', 'param2']);
-
-
-
-// 3. stdout의 'data'이벤트리스너로 실행결과를 받는다.
-result.stdout.on('data', function(data) {
-        console.log("111", data.toString());
-})
-
-// 4. 에러 발생 시, stderr의 'data'이벤트리스너로 실행결과를 받는다.
-result.stderr.on('data', function(data) {
-        console.log("222", data.toString());
+const spawn = require('child_process').spawn;
+const iconv = require('iconv-lite');
+const result = spawn('python', ['d.py']);
+let rs
+result.stdout.on('data', function (data) {
+    rs = iconv.decode(data, 'euc-kr');
+    console.log(rs);
+});
+result.stderr.on('data', function (data) {
+    rs = iconv.decode(data, 'euc-kr');
+    console.log(rs);
 });
 
-
+//npm install iconv

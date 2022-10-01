@@ -94,34 +94,79 @@ app.get('/api/concat', (req, res,) => {
     }
 });
 });
+// const path = require('path')
+// const pyPath = path.join(__dirname, 'd.py')
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
 
-//
-// const multer = require('multer');
-// const path = require('path');
-// const uploader = multer({
-//     storage: multer.diskStorage({
-//         destination(req,file,cb){
-//             cb(null, 'upload/');
-//         },
-//         filename(req,file,cb){
-//             const ext = path.extname(file.originalname);
-//             cb(null, 'file_'+Date.now()+ext);
-//         }
-//     }),
-//     limits: {fileSize: 5*1024*1024},
+
+// app.post("/nlp", (req,res)=>{
+//   const serverid = req.body.plzid;
+//   console.log(serverid);
 // });
-// const spawn = require('child_process').spawn
+
+const iconv = require('iconv-lite');
+let rs
+
+app.post('/nlp', async(req,res)=>{
+  const serverid = req.body.plzid;
+  console.log(serverid);
+  
+  const spawn = require("child_process").spawn 
+  const process = spawn('python',['d.py', req.body.plzid]);
+  
+  process.stdout.on('data', data => { 
+      
+      rs = iconv.decode(data, 'euc-kr');
+      console.log(rs);
+      const sendText = {
+        text : rs,
+    };
+    res.send(sendText);
+            
+  });
+
+})
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT,function() {
+  console.log("Server is running on ", PORT);
+})
 
 
-// app.post('/', uploader.single('image'),async(req,res)=>{
-//     //spawn으로 파이썬 스크립트 실행
-//     //실행할 파일(app.py)와  매개변수로 저장된 파일명을 전달
-//     const net = spawn('python',['app.py',req.file.filename]);
-    
-//     //파이썬 파일 수행 결과를 받아온다
-//     net.stdout.on('data', function(data) { 
+
+
+//갱년기여성앤뉴스타트
+// app.get('/viewNews', function (req, res) {
+//   try{
+//       const spawn = require("child_process").spawn 
+//       const process = spawn('python',['app.py',req.file.filename]);
+//       process.stdout.on('data', function(data) { 
+//           res.send(convertWebToString(data))
+//           res.end()
+//           return
+//       }) 
+//       // process.stdout.pipe(res)
+//   } catch(error) {
+//       console.error(error)
+//       res.status(500).send({error: error.message})
+//       res.end()
+//       return
+//   }
+// })
+
+
+
+// const spawn = require("child_process").spawn 
+// app.get('/text', function (req, res) {
+
+//    const net = spawn('python',['d.py',req.body.name]);
+
+//       net.stdout.on('data', function(data) { 
+
 //         console.log(data);
 //         console.log(data.toString());
 //         if(data.toString() == 'nsfw')
@@ -131,14 +176,35 @@ app.get('/api/concat', (req, res,) => {
 //     })
 // })
 
-
-
-
-
+// const spawn = require('child_process').spawn;
+// const iconv = require('iconv-lite');
+// const result = spawn('python', ['d.py']);
+// let rs
+// result.stdout.on('data', function (data) {
+//     
+//     console.log(rs);
+// });
+// result.stderr.on('data', function (data) {
+//     rs = iconv.decode(data, 'euc-kr');
+//     console.log(rs);
+// });
 
 
 // Run Server
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log("Server is running on ", PORT);
-});
+
+
+
+// app.get('/nlp', pythoncode);
+// const iconv = require('iconv-lite');
+// let rs
+
+// function pythoncode(req,res) {
+//   const spawn = require("child_process").spawn 
+//   const process = spawn('python',['d.py', '갱년기여성앤뉴스타트']);
+//   process.stdout.on('data', data => { 
+//       rs = iconv.decode(data, 'euc-kr');
+//        res.send(rs);
+            
+//   });
+
+// }
