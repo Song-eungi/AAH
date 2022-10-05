@@ -127,6 +127,7 @@ function NutName() {
           ))}
         </div>
       </div>
+      <a href='http://localhost:3000/sub' className='font-bold text-2xl text-red-800 hover:text-red-400'> >>>> 선택한 영양제와 유사한 영양제 추천받으러 가기   </a>
 
       </div>
 

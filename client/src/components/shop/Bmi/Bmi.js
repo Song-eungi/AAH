@@ -90,9 +90,9 @@ function Bmi() {
             <label className='font-bold text-green-700' >체중 </label>
             <input value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
-          <div>
-            <button className='btn font-bold' type='submit'>RESULT</button>
-            <button className='btn btn-outline font-bold' onClick={reload} type='submit'>RESET</button>
+          <div className='btntt'>
+            <button className='w-btn w-btn-green font-bold' type='submit'>RESULT</button> <br/> <br/>
+            <button className='w-btn w-btn-indigo btn-outline font-bold ' onClick={reload} type='submit'>RESET</button>
           </div>
         </form>
 

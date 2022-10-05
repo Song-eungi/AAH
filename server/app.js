@@ -1,19 +1,16 @@
 /* 
-
 ================== Most Important ==================
 * Issue 1 :
 In uploads folder you need create 3 folder like bellow.
 Folder structure will be like: 
 public -> uploads -> 1. products 2. customize 3. categories
 *** Now This folder will automatically create when we run the server file
-
 * Issue 2:
 For admin signup just go to the auth 
 controller then newUser obj, you will 
 find a role field. role:1 for admin signup & 
 role: 0 or by default it for customer signup.
 go user model and see the role field.
-
 */
 
 const express = require("express");
@@ -119,17 +116,20 @@ app.post('/nlp', async(req,res)=>{
   const process = spawn('python',['d.py', req.body.plzid]);
   
   process.stdout.on('data', data => { 
-      
-      rs = iconv.decode(data, 'euc-kr');
-      console.log(rs);
+      let myJsonString = (data.toString());
+      myJsonString = eval(myJsonString);
+      console.log(myJsonString);
       const sendText = {
-        text : rs,
+        text : myJsonString,
     };
     res.send(sendText);
             
   });
 
 })
+
+
+
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT,function() {
@@ -140,71 +140,3 @@ app.listen(PORT,function() {
 
 
 //갱년기여성앤뉴스타트
-// app.get('/viewNews', function (req, res) {
-//   try{
-//       const spawn = require("child_process").spawn 
-//       const process = spawn('python',['app.py',req.file.filename]);
-//       process.stdout.on('data', function(data) { 
-//           res.send(convertWebToString(data))
-//           res.end()
-//           return
-//       }) 
-//       // process.stdout.pipe(res)
-//   } catch(error) {
-//       console.error(error)
-//       res.status(500).send({error: error.message})
-//       res.end()
-//       return
-//   }
-// })
-
-
-
-// const spawn = require("child_process").spawn 
-// app.get('/text', function (req, res) {
-
-//    const net = spawn('python',['d.py',req.body.name]);
-
-//       net.stdout.on('data', function(data) { 
-
-//         console.log(data);
-//         console.log(data.toString());
-//         if(data.toString() == 'nsfw')
-//             res.status(200).send('nsfw')
-//         else
-//             res.status(200).send('sfw')
-//     })
-// })
-
-// const spawn = require('child_process').spawn;
-// const iconv = require('iconv-lite');
-// const result = spawn('python', ['d.py']);
-// let rs
-// result.stdout.on('data', function (data) {
-//     
-//     console.log(rs);
-// });
-// result.stderr.on('data', function (data) {
-//     rs = iconv.decode(data, 'euc-kr');
-//     console.log(rs);
-// });
-
-
-// Run Server
-
-
-
-// app.get('/nlp', pythoncode);
-// const iconv = require('iconv-lite');
-// let rs
-
-// function pythoncode(req,res) {
-//   const spawn = require("child_process").spawn 
-//   const process = spawn('python',['d.py', '갱년기여성앤뉴스타트']);
-//   process.stdout.on('data', data => { 
-//       rs = iconv.decode(data, 'euc-kr');
-//        res.send(rs);
-            
-//   });
-
-// }
