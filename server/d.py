@@ -31,19 +31,13 @@ def get_recommand(PRDUCT):
 
   choice = []
   for i in range(10):
-      choice.append(data['PRDUCT','MAIN_FNCTN'][pr_indices[i]])
+      choice.append(data['PRDUCT'][pr_indices[i]])
+
     # 가장 유사한 10개 제목을 리턴합니다.
   # print('***영양제 추천 순위***')
   js=json.dumps(choice)
   print(js)
-  # for i in range(10):
-  #     print('  > ' + choice[i])
 
-  
-  # print(str(i+1) + ' : ' + choice[i])
-  # for i in titles:
-  #   print(i)
-  
 
 # movies = pickle.load(open('pr.pickle', 'rb'))
 # cosine_sim = pickle.load(open('item_sim.pickle', 'rb'))

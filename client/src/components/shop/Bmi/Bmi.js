@@ -65,10 +65,10 @@ function Bmi() {
     <div className="app2">
     <img id="imma"class="" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUWCjo%2FbtrMFGPaP5G%2Fc5Z4wDbYb5RwGbH5EBC8eK%2Fimg.jpg"></img>
       <div className='container22'>
-        <h3 className='center font-bold text-5xl '>비만 자기 진단</h3>
+        <h3 className='center font-bold text-5xl '>비만 자가 진단</h3>
         <br/>
         <div className=' font-bold text-3xl mt-10 text-green-700'>BMI(신체 질량지수)란</div>
-        <div class="text">체질량지수(Body Mass Index)로 체중을 키의 제곱으로 나눈 값을 통해 지방의 양을 추정하는 비만측정법. <br/>
+        <div class="font-bold">체질량지수(Body Mass Index)로 체중을 키의 제곱으로 나눈 값을 통해 지방의 양을 추정하는 비만측정법. <br/>
 			이 BMI 지수가 높으면 높을수록 생활습관병이 걸리기 쉽고, 비만학회에서는 남녀 모두 지수가 22일때 <br/>가장 건강한 상태이고 이상적인 체중일 때 라고 합니다.</div>
       <br/>
       <div className=' font-bold text-3xl text-green-700'>BMI 계산하기</div>
@@ -108,7 +108,7 @@ function Bmi() {
         {/* <img src='./imgs/bmibmi.png'></img> */}
         <br/>
         <br/>
-        <div className=' font-bold text-3xl text-green-600 mb-5' >예방 및 관리</div>
+        <div className=' font-bold text-3xl text-green-700 mb-5' >예방 및 관리</div>
         <div>
           
         </div>
@@ -124,8 +124,8 @@ function Bmi() {
 					</ul>
 				</li>
 			</ul>
-      <a href='http://localhost:3000/products/category/6321ac80bcaa9f0f9066f9c1' className='font-bold text-2xl text-green-700 hover:text-green-400'> >>>> 영양제 다이어트 식품 구입하러 바로가기  </a>
-      <div className=' font-bold text-2xl mt-5 mb-5'>비만 관리를 위한 식사요법</div>
+      <a href='http://localhost:3000/products/category/6321ac80bcaa9f0f9066f9c1' className='font-bold text-2xl text-green-400 hover:text-green-400'> >>>> 영양제 다이어트 식품 구입하러 바로가기  </a>
+      <div className=' font-bold text-3xl text-green-700 mb-5 mt-10'>비만 관리를 위한 식사요법</div>
       <ul class="bu">
 				<li>비만 관리를 위해서는 전반적인 식사량을 줄이고 기름진 음식을 피합니다.</li>
 				<li>과식하지 않고, 금주합니다.</li>

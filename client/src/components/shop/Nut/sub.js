@@ -56,6 +56,7 @@ export default class App22 extends Component {
        
        <div className= "container22">
        <h3 className='font-bold text-5xl mt-5 mb-10 '>딥러닝을 이용한 영양제 추천 시스템</h3>
+       <h3 className='font-bold text-3xl mt-5 mb-10 '>-기능 기반-</h3>
       <br/>
       <div className='text-xl text-center leading-normal h-full '>
        
@@ -88,27 +89,11 @@ export default class App22 extends Component {
             <div className="sub-container-state ">
               <br/>
               <br/>
-             <div className="text-blue-600 text-3xl font-bold ">***영양제 추천 순위***</div>
+             <div className="text-blue-600 text-4xl font-bold center ">***영양제 추천 순위***</div>
              <br/>
-             <br/>
-             <div className=' text-2xl leading-9 font-medium '>
-              {this.state.id}</div> 
-              {/* <NewsList newsArr={this.state.newsList} /> */}
-            {/* <div>
-      {this.state.id.map((element, index) => {
-        return (
-          <div key={index}>
-            <h2>{element}</h2>
-          </div>
-        );
-      })}
-    </div> */}
-              <br/>
-              
-            
-              
-                    {this.state.listt.map((item) => { return (<li>{item}</li>) })}
-              
+             <div className="ddddd">
+                    {this.state.listt.map((item) => { return (<p className="rcomad center font-bold text-2xl leading-9 font-medium">{item}</p>) })}
+              </div>
             </div>
         
             <br/>
