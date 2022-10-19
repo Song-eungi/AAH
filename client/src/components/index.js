@@ -20,7 +20,7 @@ import Eun from "./Home/eun/eun";
 import Dong from "./Home/dong/dong";
 import Jun from "./Home/jun/jun";
 import Map from "./shop/Nut/sub.js";
-import App222 from "./shop/Nut/subsub.js";
+
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -33,7 +33,7 @@ const Routes = (props) => {
         <Route exact path="/" component={Home} />
         <Route path="/nut" component={NutName}/>
         <Route path="/sub" component={Map}/>
-        <Route path="/subsub" component={App222}/>
+   
         <Route exact path="/bmi" component={Bmi} />
         <Route exact path="/user/orders" component={UserOrders} />
         <Route exact path="/user/profile" component={UserProfile} />

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./sub.css";
 import Navber from "../partials/Navber";
 import Footer from "../partials/Footer";
-import NewsList from "./subsub";
+
 
 export default class App22 extends Component {
   state = {
